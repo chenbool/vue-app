@@ -61,8 +61,7 @@ router.beforeEach((to, from, next) => {
 
       // 发起 登陆 请求
       axios.get(api.islogin).then(res => {
-        
-        // console.log(res.data)
+
         // 判断是否登陆成功
         if( res.data.error > 0){
           isLogin = false

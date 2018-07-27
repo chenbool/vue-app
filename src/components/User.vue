@@ -13,13 +13,6 @@
           <img :src=" 'http://ms.bigzhl.com/'+info.avatar" :alt="info.nickname">
         </md-card-media>
       </md-card-header>
-  <!-- 
-      <md-card-actions>
-        <md-button>Action</md-button>
-        <md-button>Action</md-button>
-      </md-card-actions> 
-  -->
-
     </md-card>
 
     <!-- 图表统计 -->
