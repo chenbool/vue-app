@@ -7,9 +7,12 @@ import router from './router'
 // VueMaterial
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
-
 Vue.use(VueMaterial)
 
+import vPage from 'v-page';
+Vue.use(vPage)
+
+import 'font-awesome/css/font-awesome.css'
 import axios from "axios"
 import store from './store/store'
 import api from './api'
