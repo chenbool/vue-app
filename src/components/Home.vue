@@ -49,7 +49,7 @@ export default {
               type: 'pie'                          //指定图表的类型，默认是折线图（line）
           },
           title: {
-              text: '今日销售'                 // 标题
+              text: '今日销售'
           },
           credits: {
               enabled: false

@@ -1,7 +1,8 @@
 <template>
   <div class="good">
     <md-table v-model="searched" md-sort="name" md-sort-order="asc" md-card md-fixed-header>
-      <md-table-toolbar v-show="isSearch">
+
+      <md-table-toolbar v-show="isSearch" class="search-box">
 
         <md-field >
           <label for="movie">分类</label>
