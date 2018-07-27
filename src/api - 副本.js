@@ -1,5 +1,5 @@
 // const proxy = 'https://bird.ioliu.cn/v1/?url='
-const proxy = 'http://192.168.1.165:3000/api/'
+const proxy = 'http://127.0.0.1:3000/api/'
 
 export default {
   'login': proxy + 'login/index',

@@ -66,6 +66,7 @@ export default {
           _this.$layer.msg( res.data.msg )
           _this.$router.push({ path: '/home' })
           _this.$store.commit('login')
+          // localStorage.setItem('nickname', res.data.user_name )
         }else{
           _this.$layer.msg( res.data.msg )
         }

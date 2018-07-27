@@ -9,6 +9,7 @@ import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 Vue.use(VueMaterial)
 
+// 分页
 import vPage from 'v-page';
 Vue.use(vPage)
 

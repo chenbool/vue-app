@@ -46,8 +46,8 @@
       </md-table-row>
     </md-table>
 
+    <!-- page -->
     <v-page :setting="pageSet" @page-change="pageChange"></v-page>
-
 
     <!-- 搜索 -->
     <div class="search-state md-primary" @click="isSearch = !isSearch">
@@ -93,7 +93,7 @@
       pageSet: {
         totalRow: 0,//required option
         language: 'cn',//default: 'cn en'
-        pageSizeMenu: [10, 20, 50, 100]//default: [10, 20, 50, 100]
+        pageSizeMenu: [10, 15, 20, 30, 50, 100]//default: [10, 20, 50, 100]
       }
 
     }),
@@ -140,15 +140,12 @@
         if(window.localStorage){
           const res = localStorage.getItem('history')
 
-          // console.log(res)
-
           if( res == 'undefined' || res == null){
             const temp = new Array()
             temp.push(val)
             localStorage.setItem('history', JSON.stringify(temp) )
           }else{
             const temp = JSON.parse(res)
-            // console.log(temp)
             // 数组去重
             Array.prototype.distinct = function (){
               var arr = this,i,j,len = arr.length;
@@ -198,17 +195,20 @@
         
       },
       pageChange: function(pInfo){
-        console.log(pInfo);//{pageNumber: 1, pageSize: 10}
-        
+
+        //{pageNumber: 1, pageSize: 10}
+        // console.log(pInfo);
+
         this._initData({
           params:{
             page: pInfo.pageNumber,
-            list_rows: pInfo.pageSize,
+            phpsize: pInfo.pageSize,
             cate: this.currentCate,
             name: this.search,
             color: this.currentColor
           }
         })
+
       }
 
 
@@ -220,7 +220,7 @@
     watch: {
       isSearch:function(newVal,oldVal){
         // console.log( oldVal ) console.log( newVal )
-        this.searchIcon = !newVal ? 'fa-angle-double-right' :'fa-angle-double-left'
+        this.searchIcon = !newVal ? 'fa-angle-double-left' :'fa-angle-double-right'
       }
     }
   }
@@ -257,7 +257,10 @@
     padding: 4px;
     background: rgba(68,138,255, 0.8);
   }
-
+  .vPagination{
+    font-size:10px;
+    padding-bottom:20px;
+  }
   /* .md-table-fixed-header-container thead tr th:first-child div:first-child{
     width:185px; 
   } */
