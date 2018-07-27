@@ -8,6 +8,7 @@ export default {
   'getinfo': proxy + 'admin/info',
   'good': proxy + 'good/index',
   'cate': proxy + 'good/cate',
-  'getsale': proxy + 'sale/getuser'
+  'getsale': proxy + 'sale/getuser',
+  'getusersale': proxy + 'sale/getusersale',
 }
 

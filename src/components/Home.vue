@@ -48,11 +48,17 @@ export default {
               type: 'pie'                          //指定图表的类型，默认是折线图（line）
           },
           title: {
-              text: '销售情况'                 // 标题
+              text: '今日销售'                 // 标题
           },
+          // tooltip: {
+          //   animation: true,               // 是否启用动画效果
+          //   formatter: function () {
+          //     return '<b>' + this.x + '</b><br/>' +this.series.name + ': ' + this.y+'元';
+          //   }
+          // },
           series: [{
                 type: 'pie',
-                name: '销售',
+                name: '金额',
                 data: [{
                     name: '小张',
                     y: 13
@@ -66,11 +72,17 @@ export default {
       const _this = this
 
       // 获取数据 填充图表数据
-      // this.$axios.get( this.$api.getsale,{}).then(res=>{ 
-      // })
+      this.$axios.get( this.$api.getusersale,{}).then(res=>{ 
+        // console.log(res.data)
+        // console.log(_this.options.series[0].data)
+        _this.options.series[0].data = res.data
 
-      // 图表初始化
-      const chart = Highcharts.chart('container', this.options);
+        // 图表初始化
+        const chart = Highcharts.chart('container', this.options);
+
+      })
+
+
     }
   }
 

@@ -231,7 +231,7 @@
     max-width: 100%;
   }
   .md-table-cell .md-table-cell-container{
-    font-size: 10px;
+    font-size: 14px;
     padding: 0;
   }
   .md-table-cell{
@@ -246,7 +246,7 @@
   }
   .md-input{
     height:20px;
-    font-size:10px;
+    font-size:14px;
   }
 
   .search-state{
@@ -258,7 +258,7 @@
     background: rgba(68,138,255, 0.8);
   }
   .vPagination{
-    font-size:10px;
+    font-size:14px;
     padding-bottom:20px;
   }
   /* .md-table-fixed-header-container thead tr th:first-child div:first-child{
