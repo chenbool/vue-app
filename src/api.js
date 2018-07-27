@@ -10,5 +10,6 @@ export default {
   'cate': proxy + 'good/cate',
   'getsale': proxy + 'sale/getuser',
   'getusersale': proxy + 'sale/getusersale',
+  'getplatform': proxy + 'sale/getPlatform',
 }
 
