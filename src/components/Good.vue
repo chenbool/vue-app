@@ -258,9 +258,19 @@
     padding: 4px;
     background: rgba(68,138,255, 0.8);
   }
+
+  .vPaginationRight{
+    text-align: center !important; 
+  }
   .vPagination{
     font-size:14px;
     padding-bottom:20px;
+  }
+  .bPageInfo{
+    display: none !important;
+  }
+  .vPaginationList{
+    display: none !important;
   }
   /* .md-table-fixed-header-container thead tr th:first-child div:first-child{
     width:185px; 

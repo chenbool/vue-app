@@ -123,7 +123,7 @@ export default {
               type: 'column'                          //指定图表的类型，默认是折线图（line）
           },
           title: {
-              text: '销售情况'                 // 标题
+              text: '近期销售'
           },
           credits: {
               enabled: false
