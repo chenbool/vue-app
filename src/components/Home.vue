@@ -50,6 +50,9 @@ export default {
           title: {
               text: '今日销售'                 // 标题
           },
+          credits: {
+              enabled: false
+          },
           // tooltip: {
           //   animation: true,               // 是否启用动画效果
           //   formatter: function () {
