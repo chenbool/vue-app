@@ -18,7 +18,9 @@ export default {
   components: {
   },
   created() {
-    console.log(this.$store.state)
+    // this.$store.state.activeItem = true
+  },
+  mounted() {
   },
   methods: {
     login: function() {

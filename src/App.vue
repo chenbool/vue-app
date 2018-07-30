@@ -3,7 +3,7 @@
 
     <md-toolbar class="md-primary md-dense app-title">
       <!-- <div class="md-toolbar-section-start"> -->
-        <md-button class="md-icon-button" @click="back">
+        <md-button class="md-icon-button" @click="back" v-show="isback">
           <!-- <md-icon>menu</md-icon> -->
           <i class="fa fa-angle-left fa-2x"></i>
         </md-button>
@@ -14,10 +14,6 @@
     <!-- 路由匹配到的组件将渲染在这里 -->
     <router-view/>
 
-@bigzhl.com
-
-苏州市工业园区东平街282号汉嘉大厦3002
-
   </div>
 </template>
 
@@ -27,11 +23,16 @@ export default {
   data () {
     return {
       dialog:true,
-      appTitle:'苏州智慧龙'
+      appTitle:'苏州智慧龙',
+      isback: false
     }
   },
   created() {
     // this.appTitle = this.$store.state.appTitle
+  },
+  mounted() {
+    this.isback = this.$store.state.isback
+    // console.log( this.$store.state.isback )
   },
   methods: {
     back: function(){
