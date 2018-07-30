@@ -5,6 +5,7 @@ import Home from '@/components/Home'
 import Login from '@/components/Login'
 import User from '@/components/User'
 import Good from '@/components/Good'
+import Customer from '@/components/user/Customer'
 import Empty from '@/components/common/Empty'
 
 import store from '../store/store'
@@ -45,6 +46,12 @@ const router = new Router({
       name: 'empty',
       component: Empty
     },
+    {
+      path: '/customer',
+      name: 'customer',
+      component: Customer
+    },
+
   ]
 })
 

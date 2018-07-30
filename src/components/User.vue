@@ -26,7 +26,7 @@
       </md-toolbar> -->
 
       <md-list>
-        <md-list-item>
+        <md-list-item  to="/customer">
           <md-icon>move_to_inbox</md-icon>
           <span class="md-list-item-text">我的客户</span>
         </md-list-item>
