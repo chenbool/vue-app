@@ -19,43 +19,83 @@
     <div id="container" style="min-width:100px;height:300px"></div>
 
 
+    <!--  -->
     <div class="viewport">
+      <!-- <md-toolbar :md-elevation="1">
+        <span class="md-title">Inset</span>
+      </md-toolbar> -->
 
-      <md-list class="md-double-line">
-        <!-- <md-subheader>手机</md-subheader>
+      <md-list>
+        <md-list-item>
+          <md-icon>move_to_inbox</md-icon>
+          <span class="md-list-item-text">我的客户</span>
+        </md-list-item>
 
         <md-list-item>
-          <md-icon class="md-primary">phone</md-icon>
+          <md-icon>send</md-icon>
+          <span class="md-list-item-text">Sent Mail</span>
+        </md-list-item>
 
-          <div class="md-list-item-text">
-            <span>(650) 555-1234</span>
-            <span>Mobile</span>
-          </div>
+        <md-list-item>
+          <md-icon>delete</md-icon>
+          <span class="md-list-item-text">Trash</span>
+        </md-list-item>
+
+        <md-list-item>
+          <md-icon>error</md-icon>
+          <span class="md-list-item-text">Spam</span>
+        </md-list-item>
+
+        <md-divider class="md-inset"></md-divider>
+
+        <md-list-item>
+          <md-avatar>
+            <img src="https://placeimg.com/40/40/people/5" alt="People">
+          </md-avatar>
+
+          <span class="md-list-item-text">Abbey Christansen</span>
 
           <md-button class="md-icon-button md-list-action">
-            <md-icon>sms</md-icon>
+            <md-icon class="md-primary">chat_bubble</md-icon>
           </md-button>
         </md-list-item>
 
-        <md-list-item class="md-inset">
-          <div class="md-list-item-text">
-            <span>(650) 555-1234</span>
-            <span>Mobile</span>
-          </div>
+        <md-list-item>
+          <md-avatar>
+            <img src="https://placeimg.com/40/40/people/1" alt="People">
+          </md-avatar>
+
+          <span class="md-list-item-text">Alex Nelson</span>
 
           <md-button class="md-icon-button md-list-action">
-            <md-icon>sms</md-icon>
+            <md-icon class="md-primary">chat_bubble</md-icon>
           </md-button>
-        </md-list-item> -->
+        </md-list-item>
+
+        <md-list-item>
+          <md-avatar>
+            <img src="https://placeimg.com/40/40/people/6" alt="People">
+          </md-avatar>
+
+          <span class="md-list-item-text">Mary Johnson</span>
+
+          <md-button class="md-icon-button md-list-action">
+            <md-icon>chat_bubble</md-icon>
+          </md-button>
+        </md-list-item>
+
 
         <md-divider></md-divider>
+
 
         <div>
           <md-button class="md-raised md-accent" @click="quit">注销登陆</md-button>
         </div>
-  
+
+
       </md-list>
     </div>
+
 
     <foot></foot>
   </div>
@@ -156,9 +196,15 @@ export default {
       };
 
       const _this = this
+      const data = {
+        params:{
+          time:'week',
+          nickname: _this.info.nickname
+        }
+      }
 
       // 获取销售 填充图表数据
-      this.$axios.get( this.$api.getsale,{time:'week',nickname: _this.info.nickname }).then(res=>{ 
+      this.$axios.get( this.$api.getsale,data).then(res=>{ 
 
         _this.options.xAxis.categories = res.data[1];
         _this.options.series = [
