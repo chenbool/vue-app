@@ -21,6 +21,7 @@ import api from './api'
 Vue.prototype.$store = store
 Vue.prototype.$axios = axios
 Vue.prototype.$api = api
+console.log(api)
 
 // layer
 import layer from 'vue-layer'

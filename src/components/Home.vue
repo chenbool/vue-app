@@ -36,6 +36,7 @@ export default {
   },
   created() {
     // console.log(this.$store.state)
+    console.log(this.$api)
     this.$store.state.activeItem = 'bottom-bar-item-home'
   },
   mounted() {
